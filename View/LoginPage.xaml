@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApplicationPokedex.View.LoginPage"
+             Title="LoginPage"         
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Source="recherche.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFit" />
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="20" BackgroundColor="Transparent">
+                
+                <!-- nom d'utilisateur -->
+                <Entry Placeholder="Entrez votre nom d'utilisateur" PlaceholderColor="Gray" TextColor="White" BackgroundColor="#333333" HorizontalOptions="FillAndExpand" Margin="0,0,30,10"  />
+
+                <!-- Bouton Login -->
+                <Button Text="Se connecter" TextColor="White" BackgroundColor="DarkRed" HorizontalOptions="FillAndExpand" CornerRadius="5" Margin="20,10,50,0" Clicked="btnClick" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ApplicationPokedex.MenuAccueil"
+             x:Class="ApplicationPokedex.View.AcceuilPage"
+             Title="AcceuilPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="Black">
     <ContentPage.Content>
         <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
             <Image Source="base.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFit" />
-            <Button BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" />
+            <Button BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" IsEnabled="True" Clicked="btnClick" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

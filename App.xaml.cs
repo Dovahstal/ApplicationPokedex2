@@ -6,12 +6,13 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MenuAccueil())
+            MainPage = new NavigationPage(new MainPage())
             {
                 BarBackgroundColor = Colors.Transparent,
                 BarTextColor = Colors.Transparent
             };
             NavigationPage.SetHasNavigationBar(this, false);
+
         }
     }
 }
