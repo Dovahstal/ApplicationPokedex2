@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApplicationPokedex.View.CollecPage"
+             Title="CollecPage"         
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Source="recherche.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFit" />
+
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20" Padding="550,0,550,0" BackgroundColor="Transparent">
+                <!-- liste poké -->
+                <ListView ItemsSource="{Binding ObsItemsPokemons}" HeightRequest="280">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border BackgroundColor="White" Stroke="Black" StrokeThickness="1" StrokeShape="RoundRectangle 10" Padding="10" Margin="5">
+                                    <VerticalStackLayout Spacing="5">
+                                        <HorizontalStackLayout VerticalOptions="CenterAndExpand" Spacing="50">
+                                            <Label Text="{Binding NomPokemon}" FontSize="14" TextColor="Black" HorizontalOptions="Start" />
+                                        </HorizontalStackLayout>
+                                    </VerticalStackLayout>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

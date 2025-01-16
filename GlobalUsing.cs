@@ -9,10 +9,10 @@ global using System.ComponentModel;
 global using System.Diagnostics;
 global using System.Runtime.CompilerServices;
 
-//global using ApplicationPokedex.Model;
+global using ApplicationPokedex.Model;
 global using ApplicationPokedex.ViewModel;
 global using ApplicationPokedex.View;
-//global using ApplicationPokedex.Services;
+global using ApplicationPokedex.Services;
 
 
 global using CommunityToolkit.Mvvm;

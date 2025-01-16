@@ -8,5 +8,8 @@ namespace ApplicationPokedex.ViewModel
 {
     internal class MenuViewModel
     {
+        public MenuViewModel()
+        {
+        }
     }
 }

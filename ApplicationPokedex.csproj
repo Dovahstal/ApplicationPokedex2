@@ -57,8 +57,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="ModelPokedex.mlnet" />
 	  <None Remove="Resources\Images\base.png" />
 	  <None Remove="Resources\Images\recherche.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="ModelPokedex.mlnet" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -84,6 +89,9 @@
 	  <MauiXaml Update="View\AcceuilPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\CollecPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -96,8 +104,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Model\" />
-	  <Folder Include="Services\" />
+	  <Folder Include="Resources\PhotosApp\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="ModelPokedex.training.cs">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

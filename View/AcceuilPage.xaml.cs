@@ -12,7 +12,7 @@ public partial class AcceuilPage : ContentPage
 
 	private void btnClick(object sender, EventArgs e)
     {
-        //vers page MenuAccueil
+        //vers page login
         Navigation.PushAsync(new LoginPage());
     }
 }
