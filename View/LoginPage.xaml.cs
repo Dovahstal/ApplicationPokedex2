@@ -16,8 +16,10 @@ public partial class LoginPage : ContentPage
 
 		if (valeurUser != valeurMdp)
 		{
-            DisplayAlert("Erreur", "Veuillez rentrer votre nom d'utilisateur ! Si vous n'en avez pas encore, crée en 1 et commencer votre collection !", "Oui", "Non");
-            //dao.CreateUtilisateurAsync(getUser(), getMdp());
+            DisplayAlert("Erreur", "Aucun compte trouvé. Voulez-vous créer un nouveau compte avec ces paramètres ?", "Oui", "Non");
+			//dao.CreateUtilisateurAsync(getUser(), getMdp());
+
+
 		}
 		else if (valeurUser == 0 && valeurMdp == 0)
 		{
