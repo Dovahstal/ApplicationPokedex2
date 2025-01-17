@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage())
+            MainPage = new NavigationPage(new AcceuilPage())
             {
                 BarBackgroundColor = Colors.Transparent,
                 BarTextColor = Colors.Transparent

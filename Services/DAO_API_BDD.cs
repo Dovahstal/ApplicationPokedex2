@@ -91,11 +91,27 @@ namespace ApplicationPokedex.Services
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task AddPokeCollecAsync(string nomPoke, string photoPoke, int numPoke, int collecId)
+        public async Task AddPokeCollecAsync(string nomPoke, string photoPoke, int collecId, int numPoke)
         {
-            var response = await _httpClient.PostAsync($"AddPokeCollec/{nomPoke}/{photoPoke}/{numPoke}/{collecId}", null);
+            var response = await _httpClient.PostAsync($"AddPokeCollec/{nomPoke}/{photoPoke}/{collecId}/{numPoke}", null);
             response.EnsureSuccessStatusCode();
         }
+
+        public async Task<int> GetIDCollecAsync(int userId)
+        {
+            var response = await _httpClient.GetAsync($"GetIDCollec/{userId}");
+            response.EnsureSuccessStatusCode();
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+            var collectionData = JsonConvert.DeserializeObject<Dictionary<string, int>>(jsonResponse);
+
+            if (collectionData.ContainsKey("IDCollection"))
+            {
+                return collectionData["IDCollection"];
+            }
+
+            return 0;
+        }
+
 
     }
 }
